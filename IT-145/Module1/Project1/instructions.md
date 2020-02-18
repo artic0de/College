@@ -15,24 +15,21 @@ Pet BAG has provided you with a specification document detailing its software ne
 
 Before you begin, it is important to analyze your client’s software requirements and the design documentation from the Supporting Materials section. Specifically, review the Pet BAG specification document and the UML Class diagram, paying close attention to the class hierarchy, attributes, and behaviors.
 To begin, open the Virtual Lab by clicking on the link in the Virtual Lab Access module. Then open your integrated development environment (IDE) and create the Pet class based on the UML Class diagram. The Pet class must meet all the specifications from the class diagram including the following:
-All attributes with appropriate data structures
-At least one constructor method
-Accessors and mutators for all attributes
+  1. All attributes with appropriate data structures
+  2. At least one constructor method
+  3. Accessors and mutators for all attributes
 When you are done implementing the Pet class, refer back to the Pet BAG specification document and select either the pet check-in or check-out method. These methods are detailed in the Functionality section of the specification document. You will develop pseudocode and a flowchart for the method you select.
 Based on the method you chose, write pseudocode that lays out a plan for the method, ensuring that you organize each step in a logical manner. Remember, you will not be creating the actual code for the method, and you do not have to write pseudocode for both methods.
 Based on the pseudocode you wrote, use the tool of your choice to create a flowchart for the method you selected. Your flowchart will help your team communicate how you are planning to develop the software for your client. In your flowchart, be sure to do the following:
-Include start and end points.
-Include appropriate decision branching.
-Align the flowchart to the check-in/check-out process.
+  1. Include start and end points.
+  2. Include appropriate decision branching.
+  3. Align the flowchart to the check-in/check-out process.
 Based on your software design and development experience, your supervisor has asked you to articulate your programming approach. This will help ensure clarity, consistency, and efficiency among all developers working on this app. Specifically, you have been asked to briefly explain how you applied object-oriented programming principles and concepts (conditional statements, inheritance, and so on) in the your software development work thus far.
 
 ## What to Submit
 To complete this project, you must submit the following:
-Pet.java Class File
-As part of your tasks for the software development team, create the Pet class in your integrated development environment (IDE). To submit this deliverable, save the Pet class file as Pet.java.
-
-Global Rain Summary Report
-As a junior software developer, you will use the Global Rain Summary Report Template to complete the report. Your report must contain your pseudocode, flowchart, and explanation of the object-oriented programming principles you applied.
+  1. Pet.java Class File: As part of your tasks for the software development team, create the Pet class in your integrated development environment (IDE). To submit this deliverable, save the Pet class file as Pet.java.
+  2. Global Rain Summary Report: As a junior software developer, you will use the [Global Rain Summary Report Template](./course_documents/IT-145 Summary Report Template.docx") to complete the report. Your report must contain your pseudocode, flowchart, and explanation of the object-oriented programming principles you applied.
 
 Supporting Materials
 Use the following resources to support your work on this project:
