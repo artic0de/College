@@ -33,12 +33,6 @@ To complete this project, you must submit the following:
 
 Supporting Materials
 Use the following resources to support your work on this project:
-
-Pet BAG Specification Document
-Review the specification document provided by Pet BAG to understand your client’s software requirements. You will use these requirements to create your flowchart and write your pseudocode.
-
-UML Class Diagram
-Use the UML class diagram, prepared by the senior developer leading your team, to implement the Pet class. This class diagram demonstrates the Pet class, Dog class, and Cat class and illustrates inheritance. A text version of this image is also available: UML Class Diagram Text Version.
-
-Downloading Files From Eclipse Tutorial
-You will write, test, and run your Pet class file using an integrated development environment (IDE). Review this tutorial to learn how to save and export files from your IDE. Important: Do not change the names of any class files.
+  1. [Pet BAG Specification Document](./course_documents/IT-145%20Pet%20BAG%20Specification%20Document.pdf): Review the specification document provided by Pet BAG to understand your client’s software requirements. You will use these requirements to create your flowchart and write your pseudocode.
+  2. UML Class Diagram: Use the UML class diagram, prepared by the senior developer leading your team, to implement the Pet class. This class diagram demonstrates the Pet class, Dog class, and Cat class and illustrates inheritance. A text version of this image is also available: UML Class Diagram Text Version.
+  3. Downloading Files From Eclipse Tutorial: You will write, test, and run your Pet class file using an integrated development environment (IDE). Review this tutorial to learn how to save and export files from your IDE. Important: Do not change the names of any class files.
