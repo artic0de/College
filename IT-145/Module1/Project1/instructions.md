@@ -29,7 +29,7 @@ Based on your software design and development experience, your supervisor has as
 ## What to Submit
 To complete this project, you must submit the following:
   1. Pet.java Class File: As part of your tasks for the software development team, create the Pet class in your integrated development environment (IDE). To submit this deliverable, save the Pet class file as Pet.java.
-  2. Global Rain Summary Report: As a junior software developer, you will use the [Global Rain Summary Report Template](../course_documents/IT-145 Summary Report Template.docx) to complete the report. Your report must contain your pseudocode, flowchart, and explanation of the object-oriented programming principles you applied.
+  2. Global Rain Summary Report: As a junior software developer, you will use the [Global Rain Summary Report Template](course_documents/IT-145 Summary Report Template.docx) to complete the report. Your report must contain your pseudocode, flowchart, and explanation of the object-oriented programming principles you applied.
 
 Supporting Materials
 Use the following resources to support your work on this project:
