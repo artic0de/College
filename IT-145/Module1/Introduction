@@ -4,3 +4,11 @@ Learning Objectives:
   
 Overview:
   Software development is, in essence, problem solving. The course will help apply computer programming to real-world problems. This module will teach basics of programming in Java. Best practices and proper organizational techniques will also be taught. Emphasized again is the need for psuedocode and flowcharts.
+
+Two mottoes in software development are vital:
+  Save early, safe often.
+  Test early, test often.
+  
+Adopting the above two mottoes will save a lot of debugging time in the long run. Essentially, don't wait to have an entirely built program to save and test your code.
+
+The IDE they recommend using is the Eclipse IDE, it also mentions using a virtual lab to use the Eclipse IDE, but hopefully that's not mandatory. There is also a book requirement, specifically for an access code to zyBooks.
