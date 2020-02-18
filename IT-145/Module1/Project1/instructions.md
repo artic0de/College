@@ -3,7 +3,7 @@ In this project, you will demonstrate your mastery of the following competency:
 Write programs by applying concepts and principles of object-oriented programming
 
 ## Scenario
-
+![alt text](./course_documents/Global%20Rain.png)
 You work for Global Rain, a software engineering company that specializes in custom software design and development. As a junior software developer, you are part of a software development team that collaborates to create solutions for entrepreneurs, businesses, and government agencies around the world.
 
 As part of a development team at Global Rain, you will be designing and developing custom software for a local pet boarding and grooming business, Pet Boarding and Grooming (Pet BAG). Pet BAG is seeking a way to modernize its operations by introducing custom software that will help replace inefficient paper-based processes. Your Global Rain team will collaborate to develop an app that will have the following initial functional areas: Check-in pets, Check-out pets, Pet management, and Reports.
