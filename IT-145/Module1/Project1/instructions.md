@@ -1,8 +1,8 @@
-##Competency
+## Competency
 In this project, you will demonstrate your mastery of the following competency:
 Write programs by applying concepts and principles of object-oriented programming
 
-##Scenario
+## Scenario
 
 You work for Global Rain, a software engineering company that specializes in custom software design and development. As a junior software developer, you are part of a software development team that collaborates to create solutions for entrepreneurs, businesses, and government agencies around the world.
 
@@ -10,7 +10,7 @@ As part of a development team at Global Rain, you will be designing and developi
 
 As part of this team, you have been tasked with completing some preliminary work that consists of writing a Java class, writing pseudocode, and creating a flowchart. You will provide these deliverables to your supervisor.
 
-##Directions
+## Directions
 Pet BAG has provided you with a specification document detailing its software needs and design documentation from your supervisor to complete your tasks.
 
 Before you begin, it is important to analyze your client’s software requirements and the design documentation from the Supporting Materials section. Specifically, review the Pet BAG specification document and the UML Class diagram, paying close attention to the class hierarchy, attributes, and behaviors.
@@ -26,7 +26,7 @@ Include appropriate decision branching.
 Align the flowchart to the check-in/check-out process.
 Based on your software design and development experience, your supervisor has asked you to articulate your programming approach. This will help ensure clarity, consistency, and efficiency among all developers working on this app. Specifically, you have been asked to briefly explain how you applied object-oriented programming principles and concepts (conditional statements, inheritance, and so on) in the your software development work thus far.
 
-##What to Submit
+## What to Submit
 To complete this project, you must submit the following:
 Pet.java Class File
 As part of your tasks for the software development team, create the Pet class in your integrated development environment (IDE). To submit this deliverable, save the Pet class file as Pet.java.
