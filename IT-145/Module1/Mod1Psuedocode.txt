@@ -1,0 +1,19 @@
+Start
+Is pet dog or cat?
+If the pet is a dog
+	If the total dog boarding spaces used is less than 30
+		Pet can be boarded
+If the pet is a cat
+	If the total cat boarding spaces used is less than 12
+		Pet can be boarded
+If the pet can be boarded
+	Is the pet new or returning?
+		If returning
+			Update information as needed
+		Else (new)
+			Collect all appropriate information
+	How long will pet be staying?
+	If pet is dog and if stay is two or more days
+		Are grooming services required?
+	Assign pet to a space, update cat or dog spaces used.
+End
