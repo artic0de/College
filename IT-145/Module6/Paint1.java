@@ -22,7 +22,12 @@ public class Paint1 {
         	inputHeight = scnr.nextLine();
         	try {
         		wallHeight = Double.parseDouble(inputHeight);
-        		inputError = false;
+        		if (wallHeight != 0) {
+        			inputError = false;
+        		} else {
+        			inputError = true;
+        			System.out.println("Number cannot be zero...");
+        		}
         	} catch (Exception e) {
         		System.out.println("Please enter valid input...");
         	}
@@ -32,11 +37,16 @@ public class Paint1 {
         // Prompt user to input wall's width
         do {
         	inputError = true;
-        	System.out.println("Enter wall wdith (feet): ");
+        	System.out.println("Enter wall width (feet): ");
         	inputWidth = scnr.nextLine();
         	try {
         		wallWidth = Double.parseDouble(inputWidth);
-        		inputError = false;
+        		if (wallWidth != 0) {    		
+        			inputError = false;        			
+        		} else {
+        			inputError = true;
+        			System.out.println("Number cannot be zero...");
+        		}
         	} catch (Exception e) {
         		System.out.println("Please enter valid input...");
         	}
