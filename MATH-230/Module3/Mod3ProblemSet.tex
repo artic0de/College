@@ -1,0 +1,393 @@
+% ----------------------------------------------------------------
+% AMS-LaTeX Paper ************************************************
+% **** -----------------------------------------------------------
+%\documentclass{amsart}
+%\usepackage{txfonts}
+%\documentclass[12pt,oneside]{article}
+\documentclass{amsart}
+\usepackage{graphicx}
+\usepackage{enumitem}
+% ----------------------------------------------------------------
+\vfuzz2pt % Don't report over-full v-boxes if over-edge is small
+\hfuzz2pt % Don't report over-full h-boxes if over-edge is small
+% THEOREMS -------------------------------------------------------
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\theoremstyle{Exercise}
+\newtheorem{ex}[thm]{Exercise}
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\theoremstyle{rule}
+\newtheorem{rul}[thm]{Rule}
+
+\numberwithin{equation}{section}
+% MATH -----------------------------------------------------------
+\newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+\newcommand{\abs}[1]{\left\vert#1\right\vert}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\Real}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\To}{\longrightarrow}
+\newcommand{\BX}{\bB(X)}
+\newcommand{\A}{\mathcal{A}}
+% ----------------------------------------------------------------
+
+% define some simple, commonly-used commands
+\newcommand{\eps}{\varepsilon}
+\newcommand{\dsum}{\displaystyle\sum}
+\newcommand{\dint}{\displaystyle\int}
+
+\newcommand{\pdr}[2]{\dfrac{\partial{#1}}{\partial{#2}}}
+\newcommand{\pdrr}[2]{\dfrac{\partial^2{#1}}{\partial{#2}^2}}
+\newcommand{\pdrt}[3]{\dfrac{\partial^2{#1}}{\partial{#2}{\partial{#3}}}}
+\newcommand{\dr}[2]{\dfrac{d{#1}}{d{#2}}}
+\newcommand{\aver}[1]{\langle {#1} \rangle}
+\newcommand{\Baver}[1]{\Big\langle {#1} \Big\rangle}
+
+\newcommand{\bzero}{\mathbf 0}
+\newcommand{\bGamma}{\mbox{\boldmath{$\Gamma$}}}
+\newcommand{\btheta}{\boldsymbol \theta}
+\newcommand{\bchi}{\mbox{\boldmath{$\chi$}}}
+\newcommand{\bnu}{\boldsymbol \nu}
+\newcommand{\bmu}{\boldsymbol \mu}
+\newcommand{\brho}{\mbox{\boldmath{$\rho$}}}
+\newcommand{\bxi}{\boldsymbol \xi}
+\newcommand{\bnabla}{\boldsymbol \nabla}
+\newcommand{\bOm}{\boldsymbol \Omega}
+\newcommand{\blambda}{\boldsymbol \lambda}
+\newcommand{\bsigma}{\boldsymbol \sigma}
+
+\newcommand{\bbR}{\mathbb R}
+\newcommand{\bbC}{\mathbb C}
+\newcommand{\bbQ}{\mathbb Q}
+\newcommand{\bbN}{\mathbb N}
+\newcommand{\bbZ}{\mathbb Z}
+
+\newcommand{\ba}{\mathbf a} \newcommand{\bb}{\mathbf b}
+\newcommand{\bc}{\mathbf c} \newcommand{\bd}{\mathbf d}
+\newcommand{\be}{\mathbf e} \newcommand{\bff}{\mathbf f}
+\newcommand{\bg}{\mathbf g} \newcommand{\bh}{\mathbf h}
+\newcommand{\bi}{\mathbf i} \newcommand{\bj}{\mathbf j}
+\newcommand{\bk}{\mathbf k} \newcommand{\bl}{\mathbf l}
+\newcommand{\bm}{\mathbf m} \newcommand{\bn}{\mathbf n}
+\newcommand{\bo}{\mathbf o} \newcommand{\bp}{\mathbf p}
+\newcommand{\bq}{\mathbf q} \newcommand{\br}{\mathbf r}
+\newcommand{\bs}{\mathbf s} \newcommand{\bt}{\mathbf t}
+\newcommand{\bu}{\mathbf u} \newcommand{\bv}{\mathbf v}
+\newcommand{\bw}{\mathbf w} \newcommand{\bx}{\mathbf x}
+\newcommand{\by}{\mathbf y} \newcommand{\bz}{\mathbf z}
+\newcommand{\bA}{\mathbf A} \newcommand{\bB}{\mathbf B}
+\newcommand{\bC}{\mathbf C} \newcommand{\bD}{\mathbf D}
+\newcommand{\bE}{\mathbf E} \newcommand{\bF}{\mathbf F}
+\newcommand{\bG}{\mathbf G} \newcommand{\bH}{\mathbf H}
+\newcommand{\bI}{\mathbf I} \newcommand{\bJ}{\mathbf J}
+\newcommand{\bK}{\mathbf K} \newcommand{\bL}{\mathbf L}
+\newcommand{\bM}{\mathbf M} \newcommand{\bN}{\mathbf N}
+\newcommand{\bO}{\mathbf O} \newcommand{\bP}{\mathbf P}
+\newcommand{\bQ}{\mathbf Q} \newcommand{\bR}{\mathbf R}
+\newcommand{\bS}{\mathbf S} \newcommand{\bT}{\mathbf T}
+\newcommand{\bU}{\mathbf U} \newcommand{\bV}{\mathbf V}
+\newcommand{\bW}{\mathbf W} \newcommand{\bX}{\mathbf X}
+\newcommand{\bY}{\mathbf Y} \newcommand{\bZ}{\mathbf Z}
+
+\newcommand{\cA}{\mathcal A} \newcommand{\cB}{\mathcal B}
+\newcommand{\cC}{\mathcal C} \newcommand{\cD}{\mathcal D}
+\newcommand{\cE}{\mathcal E} \newcommand{\cF}{\mathcal F}
+\newcommand{\cG}{\mathcal G} \newcommand{\cH}{\mathcal H}
+\newcommand{\cI}{\mathcal I} \newcommand{\cJ}{\mathcal J}
+\newcommand{\cK}{\mathcal K} \newcommand{\cL}{\mathcal L}
+\newcommand{\cM}{\mathcal M} \newcommand{\cN}{\mathcal N}
+\newcommand{\cO}{\mathcal O} \newcommand{\cP}{\mathcal P}
+\newcommand{\cQ}{\mathcal Q} \newcommand{\cR}{\mathcal R}
+\newcommand{\cS}{\mathcal S} \newcommand{\cT}{\mathcal T}
+\newcommand{\cU}{\mathcal U} \newcommand{\cV}{\mathcal V}
+\newcommand{\cW}{\mathcal W} \newcommand{\cX}{\mathcal X}
+\newcommand{\cY}{\mathcal Y} \newcommand{\cZ}{\mathcal Z}
+
+
+%%%%%%%%%%%%%%Start%%%%%%%%%%%%%Start%%%%%%%%%%%Start%%%%%%%%%%%%%%%Start%%%%%%%%%%%%%%%%%%%%%%%%%Start%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%Start%%%%%%%%%%%%%Start%%%%%%%%%%%Start%%%%%%%%%%%%%%%Start%%%%%%%%%%%%%%%%%%%%%%%%%Start%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%Start%%%%%%%%%%%%%Start%%%%%%%%%%%Start%%%%%%%%%%%%%%%Start%%%%%%%%%%%%%%%%%%%%%%%%%Start%%%%%%%%%%%%%%%%
+
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{}
+\chead{\includegraphics[scale=.1]{snhu_logo.png}}
+
+\begin{document}
+\begin{center}
+\includegraphics[scale=.1]{snhu_logo.png}
+\end{center}
+\title{\sf Module 3 Problem Set}%
+
+
+%\thm{bbjh}
+\maketitle
+This document is proprietary to Southern New Hampshire University. It and the problems within may not be posted on any non-SNHU website.\\\\\\\\
+\begin{center}
+%Enter your name below this line:
+Eric Trahan
+\end{center}
+
+
+\begin{center}
+\rule{\textwidth}{0.4pt}
+\end{center}
+
+
+\newpage
+\section*{}
+\section*{}
+Directions: Type your solutions into this document and be sure to show all steps for arriving at your solution. Just giving a final number may not receive full credit.
+\\\\
+
+
+
+%--------------------------------------------------------------------------------------------------
+
+\section*{Problem 1}
+
+A 125-page document is being printed by five printers. Each page will be printed exactly once.
+ \begin{enumerate}[label=(\alph*)]
+ \item  Suppose that there are no restrictions on how many pages a printer can print.
+ How many ways are there for the 125 pages to be assigned to the five printers?\\\\\
+{\it One possible combination: printer A prints out pages 2-50, printer B prints out pages 1 and 51-60, printer C prints out 61-80 and 86-90, printer D prints out pages 81-85 and 91-100, and printer E prints out pages 101-125.}\\\\\
+%Enter your answer below this comment line.
+We need to multiply each printer's possible page count times each other to get the maximum combinations.\\
+In other words, we need to solve $P1*P2*P3*P4*P5$ where P is the number of pages and the \# is just specifying a printer (not an integer in the equation).\\
+If there are no restrictions on how many pages a printer can print, then each printer could print all 125 pages.\\
+Meaning printer 1 could print all 125, or 124 pages and printer 2 could print the remaining 1.\\
+Therefore, $P1*P2*P3*P4*P5 = 125 * 124 * 123 * 122 * 121$, which is $P(125,5) = \frac{125!}{120!} = 28,143,753,000$ possible combinations.
+        \\\\\
+ \item Suppose the first and the last page of the document must be printed in color, and only two printers are able to print in color. The two-color printers can also print black and white. How many ways are there for the 125 pages to be assigned to the five printers?\\\\\
+%Enter your answer below this comment line.
+Only two of the printers can now print all 125 pages, the rest can only print up to 123 pages.\\
+Let us say that the first page is page $a$, and the last is page $z$.\\
+Therefore, $a$ must be printed on one of the two color printers, followed by 123 pages on any printer, finishing with page $z$ on one of the two color printers.\\
+A way to represent that is $|P| = (125 * 124) * (123 * 122 * 121)$ or $P(125,2) * P(123,3)$.\\
+Strangely enough, this actually equals the same amount, 28,143,753,000 combinations. This is because the two color printers can still print in black and white, and since there are five printers and each page can only be printed once, there is no loss when specifying that two specific pages have to each be printed on one of two printers.
+        \\\\\
+ \item Suppose that all the pages are black and white, but each group of 25 consecutive pages (1-25, 26-50, 51-75, 76-100, 101-125) must be assigned to the same printer. Each printer can be assigned 0, 25, 50, 75, 100, or 125 pages to print.
+How many ways are there for the 125 pages to be assigned to the five printers?\\\\\
+%Enter your answer below this comment line.
+Only one printer can print all 125 pages, each printer after that can only print 25 less in order to account for the previous sequence of pages.\\
+This means that $P1*P2*P3*P4*P5 = 125 * 100 * 75 * 50 * 25$, which is $1,171,875,000$ possible combinations.
+        \\\\\
+   \end{enumerate}
+ \newpage
+%--------------------------------------------------------------------------------------------------
+
+\section*{Problem 2}
+Ten kids line up for recess. The names of the kids are:\\
+\begin{center}
+ \{Alex, Bobby, Cathy, Dave, Emy, Frank, George, Homa, Ian, Jim\}.\\
+\end{center}
+Let $S$ be the set of all possible ways to line up the kids. For example, one order might be:
+\begin{center}
+  (Frank, George, Homa, Jim, Alex, Dave, Cathy, Emy, Ian, Bobby)\\
+\end{center}
+
+The names are listed in order from left to right, so Frank is at the front of the line and Bobby is at the end of the line.\\
+
+Let $T$ be the set of all possible ways to line up the kids in which George is ahead of Dave in the line. Note that George does not have to be immediately ahead of Dave. For example, the ordering shown above is an element in $T$.\\
+
+Now define a function $f$ whose domain is $S$ and whose target is $T$. Let $x$ be an element of $S$, so $x$ is one possible way to order the kids. If George is ahead of Dave in the ordering $x$, then $f(x) = x$. If Dave is ahead of George in $x$, then $f(x)$ is the ordering that is the same as $x$, except that Dave and George have swapped places.\\
+\begin{enumerate}[label=(\alph*)]
+  \item What is the output of $f$ on the following input?\\
+  (Frank, George, Homa, Jim, Alex, Dave, Cathy, Emy, Ian, Bobby)\\\\\
+%Enter your answer below this comment line.
+x = (Frank, George, Homa, Jim, Alex, Dave, Cathy, Emy, Ian, Bobby)\\
+f(x) = (Frank, George, Homa, Jim, Alex, Dave, Cathy, Emy, Ian, Bobby) since George is ahead of Dave.
+\\\\\
+  \item What is the output of $f$ on the following input?\\
+(Emy, Ian, Dave, Homa, Jim, Alex, Bobby, Frank, George, Cathy)\\\\\
+%Enter your answer below this comment line.
+x = (Emy, Ian, Dave, Homa, Jim, Alex, Bobby, Frank, George, Cathy)\\
+f(x) = (Emy, Ian, George, Homa, Jim, Alex, Bobby, Frank, Dave, Cathy), since Dave was ahead of George, they swap places.
+\\\\\
+  \item Is the function $f$ a $k$-to-1 correspondence for some positive integer $k$? If so, for what value of $k$? Justify your answer.\\\\\
+%Enter your answer below this comment line.
+Initially I wanted to say no, but thinking about it, f(x) can never have Dave in front of George.\\
+I will attempt to provide a formula for this that could possibly show a $k$-to-1 relationship.\\
+First, we need to define all possible combinations of $S$.\\
+Since there are 10 students, there are 10 'slots' in $S$ that we will represent by $s$: S = \{s1, s2, s3, s4, s5, s6, s7, s8, s9, s10\}\\
+s1 has 10 options, s2 has 9, s3 has 8... so on and so forth, therefore $|S| = 10! = 3,628,800$ possible combinations.\\
+Next we need to see the possible combinations of $T$.\\
+$T$ does not have Dave in front of George in any combination, so we have to account for that in our formula.\\
+If $T$ also equals \{s1, s2, s3, s4, s5, s6, s7, s8, s9, s10\}, then we will start with figuring out how many options s1 has.\\
+Dave will never be the first option in s1, so s1 only has 9 options. s2 has 9 options, s3 8... to where the combinations of $T$ looks like:\\ 
+$|T| = 9 * 9 * 8 * 7 * 6 * 5* 4 * 3 * 2 * 1 = 9 * 9! = 3,265,920$ combinations.\\
+Now we find $k$ in the $k$-to-1 relationship by solving $|T| = |S|/k$. We have our numbers of combinations, so now we plug it in and solve:\\
+$3,265,920 = \frac{3,628,800}{k}$, multiply $k$ by both sides and divide the left number on both sides to get $k = \frac{3,628,800}{3,265,920}$.\\
+Simplifying to simplest terms yields $k = \frac{10}{9}$. Therefore, $f$ is a $k$-to-1 correspondence connecting $|S|$ to $|T|$ where $k = \frac{10}{9}$ and $|T| = \frac{|S|}{\frac{10}{9}}$.
+\\\\\
+  \item There are 3628800 ways to line up the 10 kids with no restrictions on who comes before whom. That is, $|S| =3628800$. Use this fact and the answer to the previous question to determine $|T|$.\\\\\
+%Enter your answer below this comment line.
+I determined $|T|$ in my previous answer, which is 3,265,920.
+\\\\\
+\end{enumerate}
+
+   
+   \newpage
+%--------------------------------------------------------------------------------------------------
+
+\section*{Problem 3}
+   
+   
+\item Consider the following definitions for sets of characters:
+\begin{itemize}
+  \item Digits $\;=\; \{ 0,\, 1,\, 2,\, 3,\, 4,\, 5,\, 6,\, 7,\, 8,\, 9 \}$\\
+  \item Letters$\; = \;\{ a,\, b,\, c, \,d,\, e,\, f,\, g,\, h,\, i,\, j,\, k,\, l,\, m,\, n,\, o,\, p,\, q,\, r,\, s,\, t,\, u,\, v,\, w,\, x,\, y,\, z \}$\\
+  \item Special characters $\;=\; \{ *,\, \&,\, \$,\, \# \}$\\
+\end{itemize}
+
+Compute the number of passwords that satisfy the given constraints.
+    \begin{enumerate}[label=(\roman*)]
+    \item Strings of length 7. Characters can be special characters, digits, or letters, with no repeated characters.\\\\\
+%Enter your answer below this comment line.
+Since no character can be repeated, the answer will be a factorial for seven 'slots'.\\
+The total number of available characters is 40 (10 digits, 26 letters, 4 symbols).\\
+So the first slot has 40 options, followed by 39, followed by 38, etc... to where answer $A$ is $A = \frac{40!}{33!}$.\\
+Dividing by 33! keeps the first seven possible combinations, since we have a limit of 7 characters.\\
+This can also be represented by $P(40,7)$, which is simply saying that there are 40 non-repeating options over 7 characters.\\
+$A = \frac{40!}{33!} = 93,963,542,400$ possible password combinations.
+\\\\\
+    \item Strings of length 6. Characters can be special characters, digits, or letters, with no repeated characters. The first character can not be a special character.\\\\\
+%Enter your answer below this comment line.
+Since the first character cannot be a special character, there are 36 options for the first 'slot'.\\
+Followed by 39, 38, 37... which is to say answer $A$ is $A = 36*\frac{39!}{34!} = 2,487,270,240$ possible password combinations.\\
+We could have also written it like this: $P(36,1) * P(39,5)$.
+      \end{enumerate}
+\\\\\
+ \newpage
+%--------------------------------------------------------------------------------------------------
+
+\section*{Problem 4}
+\item A group of four friends goes to a restaurant for dinner. The restaurant offers 12 different main dishes.\\
+    \begin{enumerate}[label=(\roman*)]
+    \item Suppose that the group collectively orders four different dishes to share. The waiter just needs to place all four dishes in the center of the table. How many different possible orders are there for the group?\\\\\
+%Enter your answer below this comment line.
+Since there are no repeating dishes, the answer is $12 * 11 * 10 * 9 = \frac{12!}{8!} = 11880$ possible orders.\\
+We also could have written it like this: $P(12,4)$.
+\\\\\
+    \item Suppose that each individual orders a main course. The waiter must remember who ordered which dish as part of the order. It's possible for more than one person to order the same dish. How many different possible orders are there for the group?\\\\\
+%Enter your answer below this comment line.
+Each person has 12 options, and since there are four people, the answer is $12^4 = 20736$ possible orders.
+\\\\\
+
+    \end{enumerate}
+
+
+\item How many different passwords are there that contain only digits and lower-case letters and satisfy the given restrictions?\\
+      \begin{enumerate}[label=(\roman*)]
+    \item Length is 7 and the password must contain at least one digit.\\\\\
+%Enter your answer below this comment line.
+26 lower-case letters plus 10 digits is 36 possible characters total.\\
+Since the order doesn't matter when calculating this combination, we will say the first character only has 10 options to represent that there must be at least one digit. Therefore, the answer is $10 * 36^6 = 21,767,823,360$ possible passwords.
+\\\\\
+     \item Length is 7 and the password must contain at least one digit and at least one letter.\\\\\
+%Enter your answer below this comment line.
+26 lower-case letters plus 10 digits is 36 possible characters total.\\
+Since the order doesn't matter when calculating this combination either, we will say the first character has 10 options and the second has 26 to represent the minimum one digit and one letter requirement.\\
+The answer is $10 * 26 * 36^5 = 15,721,205,760$ possible password combinations.
+\\\\\
+    \end{enumerate}
+ 
+ \newpage
+%--------------------------------------------------------------------------------------------------
+
+\section*{Problem 5}
+
+\item
+A university offers a Calculus class, a Sociology class, and a Spanish class. You are given data below about a group of students who have all taken at least one of the three classes.\\\\
+     \begin{enumerate}[label=(\roman*)]
+     \item Group A contains 187 students. Of these, 61 students have taken Calculus, 78 have taken Sociology, and 72 have taken Spanish. 15 have taken both Calculus and Sociology, 20 have taken both Calculus and Spanish, and 13 have taken both Sociology and Spanish. How many students in Calculus have taken all three classes?\\\\\
+%Enter your answer below this comment line.
+We have everything we need to use the inclusion-exclusion principle with three sets. Let C be the set of students in calculus, So be the set of students in Sociology, and Sp the set of students in Spanish. T will be the number of students in group A. Now we make our equation and plug in our numbers:\\\\
+1. $|C| + |So| + |Sp| - |C \cup So| - |C \cup Sp| - |So \cup Sp| + |C \cup So \cup Sp| = T$\\
+2. $61 + 78 + 72 - 15 - 20 - 13 + |C \cup So \cup Sp| = 187$\\
+3. $163 + |C \cup So \cup Sp| = 187$\\
+4. $|C \cup So \cup Sp| = 187 - 163$\\
+5. $|C \cup So \cup Sp| = 24$\\\\
+Therefore, there are 24 students who have taken all three classes. Since each of these 24 students have taken every class, that makes them each a student in Calculus, satisfying the question of "How many students in Calculus have taken all three classes".
+\\\\\
+   
+\item You are given the following data about Group B. 32 students have taken Calculus, 22 have taken Sociology, and 16 have taken Spanish. 10 have taken both Calculus and Sociology, 8 have taken both Calculus and Spanish, and 11 have taken both Sociology and Spanish. How many students are in Group B?\\\\\
+%Enter your answer below this comment line.
+Let C be the set of students in calculus, So be the set of students in Sociology, and Sp the set of students in Spanish. T will be the number of students in group B.\\ 
+First, I worked on finding all of the students NOT in sociology. I did this by:\\\\
+1. $|C| - |C \cup So| = 22$\\
+2. $|Sp| - |So \cup Sp| = 5$\\
+3. $22 + 5 - |C \cup Sp| = 19$ students NOT in sociology.\\
+\\
+Next I just added the 19 students not in sociology to the 22 students in sociology, yielding 41 total students in Group B.
+\\\\\
+         \end{enumerate}
+ \newpage
+%--------------------------------------------------------------------------------------------------
+
+\section*{Problem 6}
+A coin is flipped five times. For each of the events described below, express the event as a set in roster notation. Each outcome is written as a string of length 5 from $\{H,\, T\}$, such as $HHHTH$. Assuming the coin is a fair coin, give the probability of each event.\\
+\begin{enumerate}[label=(\alph*)]
+\item The first and last flips come up heads.\\\\\
+%Enter your answer below this comment line.
+$E = \{HHHHH, HHHTH, HHTHH, HHTTH, HTHHH, HTHTH, HTTHH, HTTTH\}$\\
+$|E| = 8$, let$S$ be the set of all outcomes for five coin flips, then $|S| = 32$.\\
+Therefore, the probability is $\frac{|E|}{|S|} = \frac{8}{32} = \frac{1}{4}$.
+\\\\\
+\item There are at least two consecutive flips that come up heads.\\\\\
+%Enter your answer below this comment line.
+$E = \{HHHHH, HHHHT, HHHTH, HHHTT, HHTHH, HHTHT, HHTTH, HHTTT, HTHHH,\\
+HTHHT, HTTHH, THHHH, THHHT, THHTH, THHTT, THTHH, TTHHH, TTHHT,\\
+TTTHH\}$\\
+$|E| = 19$ and $|S| = 32$.\\
+Therefore, the probability is $\frac{|E|}{|S|} = \frac{19}{32}$.
+\\\\\
+\item The first flip comes up tails and there are at least two consecutive flips that come up heads.\\\\\
+%Enter your answer below this comment line.
+$E = \{THHHH, THHHT, THHTH, THHTT, THTHH, TTHHH, TTHHT, TTTHH\}$\\
+$|E| = 8$ and $|S| = 32$.\\
+Therefore, the probability is $\frac{|E|}{|S|} = \frac{8}{32} = \frac{1}{4}$.
+\\\\\
+\end{enumerate}
+
+ \newpage
+%--------------------------------------------------------------------------------------------------
+
+\section*{Problem 7}
+An editor has $k$ documents to review.  The order in which the documents are reviewed is random with each ordering being equally likely. There are two documents to review: ``Relaxation Through Mathematics'' and ``The Joy of Calculus.'' Give an expression for each of the probabilities below as a function of k. Simplify your final expression as much as possible so that your answer does not include any expressions in the form\\
+$
+\Big(
+ \begin{array}{c}
+ a\\
+ b
+    \end{array}
+    \Big)
+$.
+ \begin{enumerate}[label=(\alph*)]
+\item What is the probability that ``Relaxation Through Mathematics'' is first in line?\\\\\
+%Enter your answer below this comment line.
+First we need to find the total number of outcomes, which we will express the set as $|E| = k!$.\\
+If a specific book is first, then the total number of outcomes can be expressed as $|P| = (k-1)!.\\$
+Therefore, the probability that "Relaxation Through Mathematics" is first can be expressed as a function of $k$ like so:\\\\
+$f(k) = \frac{(k-1)!}{k!}$
+\\\\\
+\item What is the probability that ``Relaxation Through Mathematics'' and ``The Joy of Calculus'' are next to each other in the line?\\\\\
+%Enter your answer below this comment line.
+We already established the total of number of outcomes as $|E| = k!$, so now we need to find the number of outcomes when two specific books are next to each other.\\
+First we determine the number of ways the two documents can be together, which is $2$.\\
+Next, we treat the two as one item initially, like so: $|P| = (k-1)!$.\\
+Now we account for the number of ways the documents can be together, which yields $|P| = 2((k-1)!)$.\\
+Therefore, the probability that the two specified books will be next to each other expressed as a function of $k$ is:\\\\
+$f(k) = \frac{2((k-1)!)}{k!}$
+\\\\\
+\end{enumerate}
+
+
+\end{document}
