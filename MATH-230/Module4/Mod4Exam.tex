@@ -1,0 +1,393 @@
+% ----------------------------------------------------------------
+% AMS-LaTeX Paper ************************************************
+% **** -----------------------------------------------------------
+%\documentclass{amsart}
+%\usepackage{txfonts}
+%\documentclass[12pt,oneside]{article}
+\documentclass{amsart}
+\usepackage{graphicx}
+\usepackage{enumitem}
+% ----------------------------------------------------------------
+\vfuzz2pt % Don't report over-full v-boxes if over-edge is small
+\hfuzz2pt % Don't report over-full h-boxes if over-edge is small
+% THEOREMS -------------------------------------------------------
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\theoremstyle{Exercise}
+\newtheorem{ex}[thm]{Exercise}
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\theoremstyle{rule}
+\newtheorem{rul}[thm]{Rule}
+
+\numberwithin{equation}{section}
+% MATH -----------------------------------------------------------
+\newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+\newcommand{\abs}[1]{\left\vert#1\right\vert}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\Real}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\To}{\longrightarrow}
+\newcommand{\BX}{\bB(X)}
+\newcommand{\A}{\mathcal{A}}
+% ----------------------------------------------------------------
+
+% define some simple, commonly-used commands
+\newcommand{\eps}{\varepsilon}
+\newcommand{\dsum}{\displaystyle\sum}
+\newcommand{\dint}{\displaystyle\int}
+
+\newcommand{\pdr}[2]{\dfrac{\partial{#1}}{\partial{#2}}}
+\newcommand{\pdrr}[2]{\dfrac{\partial^2{#1}}{\partial{#2}^2}}
+\newcommand{\pdrt}[3]{\dfrac{\partial^2{#1}}{\partial{#2}{\partial{#3}}}}
+\newcommand{\dr}[2]{\dfrac{d{#1}}{d{#2}}}
+\newcommand{\aver}[1]{\langle {#1} \rangle}
+\newcommand{\Baver}[1]{\Big\langle {#1} \Big\rangle}
+
+\newcommand{\bzero}{\mathbf 0}
+\newcommand{\bGamma}{\mbox{\boldmath{$\Gamma$}}}
+\newcommand{\btheta}{\boldsymbol \theta}
+\newcommand{\bchi}{\mbox{\boldmath{$\chi$}}}
+\newcommand{\bnu}{\boldsymbol \nu}
+\newcommand{\bmu}{\boldsymbol \mu}
+\newcommand{\brho}{\mbox{\boldmath{$\rho$}}}
+\newcommand{\bxi}{\boldsymbol \xi}
+\newcommand{\bnabla}{\boldsymbol \nabla}
+\newcommand{\bOm}{\boldsymbol \Omega}
+\newcommand{\blambda}{\boldsymbol \lambda}
+\newcommand{\bsigma}{\boldsymbol \sigma}
+
+\newcommand{\bbR}{\mathbb R}
+\newcommand{\bbC}{\mathbb C}
+\newcommand{\bbQ}{\mathbb Q}
+\newcommand{\bbN}{\mathbb N}
+\newcommand{\bbZ}{\mathbb Z}
+
+\newcommand{\ba}{\mathbf a} \newcommand{\bb}{\mathbf b}
+\newcommand{\bc}{\mathbf c} \newcommand{\bd}{\mathbf d}
+\newcommand{\be}{\mathbf e} \newcommand{\bff}{\mathbf f}
+\newcommand{\bg}{\mathbf g} \newcommand{\bh}{\mathbf h}
+\newcommand{\bi}{\mathbf i} \newcommand{\bj}{\mathbf j}
+\newcommand{\bk}{\mathbf k} \newcommand{\bl}{\mathbf l}
+\newcommand{\bm}{\mathbf m} \newcommand{\bn}{\mathbf n}
+\newcommand{\bo}{\mathbf o} \newcommand{\bp}{\mathbf p}
+\newcommand{\bq}{\mathbf q} \newcommand{\br}{\mathbf r}
+\newcommand{\bs}{\mathbf s} \newcommand{\bt}{\mathbf t}
+\newcommand{\bu}{\mathbf u} \newcommand{\bv}{\mathbf v}
+\newcommand{\bw}{\mathbf w} \newcommand{\bx}{\mathbf x}
+\newcommand{\by}{\mathbf y} \newcommand{\bz}{\mathbf z}
+\newcommand{\bA}{\mathbf A} \newcommand{\bB}{\mathbf B}
+\newcommand{\bC}{\mathbf C} \newcommand{\bD}{\mathbf D}
+\newcommand{\bE}{\mathbf E} \newcommand{\bF}{\mathbf F}
+\newcommand{\bG}{\mathbf G} \newcommand{\bH}{\mathbf H}
+\newcommand{\bI}{\mathbf I} \newcommand{\bJ}{\mathbf J}
+\newcommand{\bK}{\mathbf K} \newcommand{\bL}{\mathbf L}
+\newcommand{\bM}{\mathbf M} \newcommand{\bN}{\mathbf N}
+\newcommand{\bO}{\mathbf O} \newcommand{\bP}{\mathbf P}
+\newcommand{\bQ}{\mathbf Q} \newcommand{\bR}{\mathbf R}
+\newcommand{\bS}{\mathbf S} \newcommand{\bT}{\mathbf T}
+\newcommand{\bU}{\mathbf U} \newcommand{\bV}{\mathbf V}
+\newcommand{\bW}{\mathbf W} \newcommand{\bX}{\mathbf X}
+\newcommand{\bY}{\mathbf Y} \newcommand{\bZ}{\mathbf Z}
+
+\newcommand{\cA}{\mathcal A} \newcommand{\cB}{\mathcal B}
+\newcommand{\cC}{\mathcal C} \newcommand{\cD}{\mathcal D}
+\newcommand{\cE}{\mathcal E} \newcommand{\cF}{\mathcal F}
+\newcommand{\cG}{\mathcal G} \newcommand{\cH}{\mathcal H}
+\newcommand{\cI}{\mathcal I} \newcommand{\cJ}{\mathcal J}
+\newcommand{\cK}{\mathcal K} \newcommand{\cL}{\mathcal L}
+\newcommand{\cM}{\mathcal M} \newcommand{\cN}{\mathcal N}
+\newcommand{\cO}{\mathcal O} \newcommand{\cP}{\mathcal P}
+\newcommand{\cQ}{\mathcal Q} \newcommand{\cR}{\mathcal R}
+\newcommand{\cS}{\mathcal S} \newcommand{\cT}{\mathcal T}
+\newcommand{\cU}{\mathcal U} \newcommand{\cV}{\mathcal V}
+\newcommand{\cW}{\mathcal W} \newcommand{\cX}{\mathcal X}
+\newcommand{\cY}{\mathcal Y} \newcommand{\cZ}{\mathcal Z}
+
+
+%%%%%%%%%%%%%%Start%%%%%%%%%%%%%Start%%%%%%%%%%%Start%%%%%%%%%%%%%%%Start%%%%%%%%%%%%%%%%%%%%%%%%%Start%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%Start%%%%%%%%%%%%%Start%%%%%%%%%%%Start%%%%%%%%%%%%%%%Start%%%%%%%%%%%%%%%%%%%%%%%%%Start%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%Start%%%%%%%%%%%%%Start%%%%%%%%%%%Start%%%%%%%%%%%%%%%Start%%%%%%%%%%%%%%%%%%%%%%%%%Start%%%%%%%%%%%%%%%%
+%\documentclass[12pt,oneside]{article}
+
+\usepackage{pdfpages}
+%--------------
+\usepackage{enumitem}
+%-------------Tasks
+%\usepackage{tasks} %\begin{tasks} \item \end{tasks}
+%\bfseries Horizontal list: a = alphabetical \normalfont
+%\begin{tasks}[counter-format = {tsk[a].},label-offset = {0.6em},label-format = {\bfseries}](6)
+%\task One
+%\task Two
+%\task Three
+%\task Four
+%\task Five
+%\task Six
+%\task Seven
+%\task Eight
+%\task Nine
+%\task Ten
+%\end{tasks}
+%\vglue5mm
+%\bfseries Horizontal list: A = Alphabetical \normalfont
+%\begin{tasks}[counter-format = {(tsk[A])},label-offset = {0.8em},label-format = {\bfseries}](3)
+%\task One
+%\task Two
+%\task Three
+%\task Four
+%\task Five
+%\task Six
+%\task Seven
+%\task Eight
+%\task Nine
+%\task Ten
+%\end{tasks}
+
+
+
+%___________________________
+\usepackage[margin=2.5cm]{geometry}
+
+\geometry{hmargin=3cm,vmargin=2cm}
+\usepackage{tikz}
+\def\width{18}
+\def\hauteur{13}
+
+
+\pagestyle{plain}
+
+%%%%%%%%%%%%%%Start%%%%%%%%%%%%%Start%%%%%%%%%%%Start%%%%%%%%%%%%%%%Start%%%%%%%%%%%%%%%%%%%%%%%%%Start%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%Start%%%%%%%%%%%%%Start%%%%%%%%%%%Start%%%%%%%%%%%%%%%Start%%%%%%%%%%%%%%%%%%%%%%%%%Start%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%Start%%%%%%%%%%%%%Start%%%%%%%%%%%Start%%%%%%%%%%%%%%%Start%%%%%%%%%%%%%%%%%%%%%%%%%Start%%%%%%%%%%%%%%%%
+
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{}
+\chead{\includegraphics[scale=.1]{snhu_logo.png}}
+\begin{document}
+
+\title{\sf MAT 230 Exam One}%
+
+
+\begin{center}
+\includegraphics[scale=.1]{snhu_logo.png}
+\end{center}
+
+%\thm{bbjh}
+\maketitle
+This document is proprietary to Southern New Hampshire University. It and the problems within may not be posted on any non-SNHU website.\\\\\\\\
+\begin{center}
+%Enter your name below this line:
+Eric Trahan
+\end{center}
+
+\begin{center}
+\rule{\textwidth}{0.4pt}
+\end{center}
+\newpage
+\section*{}
+\section*{}
+Directions: Type your solutions into this document and be sure to show all steps for arriving at your solution. Just giving a final number may not receive full credit.
+\\
+\section*{Problem 1}
+\begin{enumerate}[label=(\alph*)]
+\item The domain for all variables in the expressions below is the set of real numbers. {\bf Determine whether each statement is true or false.}
+\begin{enumerate}[label=(\roman*)]
+  \item $\forall\, x\; \exists \,y\;(x\,+\,y\;\geq \;0)$
+\\\\
+  %Enter your answer below this comment line.
+  This is true.\\
+  For any real number, $x$, there is some real number, $y$, such that the sum is greater than or equal to zero.\\
+  Since there are infinite numbers, whatever number $x$ is, we can simply make $y$ whatever number we need to make the sum at least 0.
+\\\\
+  \item $\exists \, x\; \forall \,y\;(x\,\cdot\,y\;>\; 0)$
+   \\\\
+  %Enter your answer below this comment line.  
+  This is false.\\
+  It states that there exists a real number, $x$, that when multiplied by any real number, $y$, the product is greater than zero.\\
+  0 is any real number, and 0 times $x$ is 0, which is not greater than 0.
+\\\\
+\end{enumerate}
+
+\item {\bf Translate each of the following English statements into logical expressions.}
+\begin{enumerate}[label=(\roman*)]
+  \item There are two numbers whose ratio is less than $1$.
+   \\\\
+  %Enter your answer below this comment line.  
+  $\exists x \exists y (\frac{x}{y} < 1)$
+\\\\
+  \item The reciprocal of every positive number is also positive.
+   \\\\
+  %Enter your answer below this comment line.  
+  $\forall x^+(\frac{1}{x} > 0)$
+\\\\
+  \end{enumerate}
+  \end{enumerate}
+  \newpage
+  \section*{Problem 2}
+  Prove the following using the specified technique:
+  \begin{enumerate}[label=(\alph*)]
+    \item Prove by contrapositive that for any two real numbers, $x$ and $y$,\\
+         if $x$ is rational and $y$ is irrational then $x\, +\, y$ is also irrational.
+          \\\\
+  %Enter your answer below this comment line.  
+  \begin{proof}
+  Let $x$ and $y$ be any two real numbers, we will prove that if $x + y$ is rational, then $x$ is irrational or $y$ is rational.\\
+  If $x + y$ is rational, then it can be expressed as $\frac{a}{b}$ where $a$ and $b$ are integers and $b$ is not zero.\\
+  This gives us $x + y = \frac{a}{b}$.\\
+  If $x + y = \frac{a}{b}$ is true, then $x = \frac{a}{b} - y$ is also true.\\
+  A real number can either be rational or irrational. \\
+  Case 1. ($y$ is rational).
+  If $y$ is rational then it can be represented as $\frac{c}{d}$ where $c$ and $d$ are integers and $d$ is not zero.\\
+  We plug that into our equation and get $x = \frac{a}{b} - \frac{c}{d}$.\\
+  We simplify to $x = \frac{da-bc}{db}$. Let $n = da-bc$ and $m = db$. Since neither $d$ or $b$ are zero, and all values are integers, $n$ and $m$ are also integers.\\
+  Therefore, $x = \frac{n}{m}$ is rational. This means that if $x + y$ is rational, then $x$ and $y$ are also rational.\\
+  Case 2. ($x$ is irrational).
+  If $x$ is irrational, then it cannot be represented as a fraction of two integers where the denominator is non-zero.\\
+  Since $x = \frac{a}{b} - y$ is true, and $\frac{a}{b}$ is rational, $y$ must be some real number that is irrational, since we showed in case 1 that rational minus a rational is still a rational.\\
+  This means that if $x + y$ is rational, then $x$ and $y$ are both irrational.\\
+  Therefore, if $x + y$ is rational, then $x$ is irrational or $y$ is rational.\\
+  \end{proof}
+\\\\\\\\
+    \item Prove by contradiction that for any positive two real numbers, $x$ and $y$,\\
+         if $x\cdot y\, \geq \,100$ then either $x\, \geq \,10$ or $y\, \geq \, 10$.
+          \\\\
+  %Enter your answer below this comment line.  
+  \begin{proof}
+  We will prove that there exists two positive real numbers, $x$ and $y$, who's product is greater than or equal to $100$ and both $x$ and $y$ are less than $10$.\\
+  That is to say, we will prove that $\exists x \exists y ((xy \geq 100) \land ((x < 10) \land (y < 10)))$ is true.\\
+  Let us start with the smallest possible product, 100. If $xy = 100$ is true, then $x = \frac{100}{y}$ is also true.\\
+  The largest number $y$ can be is a real number infinitely approaching $10$. Since we are dividing 100 by $y$, we want $y$ to be as large as possible in order to meet the requirement of $x < 10$. Therefore, we will set $y = 10$ for the purpose of our proof, even though it cannot be larger than 10.\\
+  If $y = 10$, then $x = \frac{100}{10} = 10$. However, $x$ cannot be larger than 10 either.\\
+  Therefore, no two numbers exists that can simultaneously have a product of 100 or greater AND both be less than 10.\\
+  This proves, by contradiction, the original theorem.\\
+  \end{proof}
+\\\\
+  \end{enumerate}
+  \newpage
+  \section*{Problem 3}
+  Let $n\, \geq \, 1$, $x$ be a real number, and $x\, \geq\,-1$. {\bf Prove the following statement using mathematical induction.}
+  \[(1\,+\,x)^n\;\geq\;1\,+\,nx\]
+\\\\
+  %Enter your answer below this comment line.  
+  For mathematical induction, we must prove the base case first. The base case being when $n = 1$.\\
+  The base case: $(1 + x)^1 \geq 1 + 1x$.\\
+  Simplifying, we get $1 + x \geq 1 + x$, which is true. Therefore the base case is true.\\
+  \\
+  Next, let's establish that the theorem is true for the inductive step, $n + 1$.\\
+  First, we have our original equation: $(1 + x)^n \geq 1 + nx$.\\
+  Now we multiply $(1 + x)$ to both sides: $(1 + x)(1 + x)^n \geq (1 + nx)(1 + x)$.\\
+  Simplifying to $(1 + x)^{n+1} \geq nx^2 + nx + x + 1$.\\
+  Simplifying again to $(1 + x)^{n+1} \geq nx^2 + x(n + 1) + 1$.\\
+  Simplifying once more to $(1 + x)^{n+1} \geq x(nx + n + 1) + 1$.\\
+  Since the above is true, then $(1 + x)^{n+1} \geq 1 + x(n + 1)$ is also true since $x(nx + n + 1) + 1 > x(n + 1) + 1$.\\
+  Therefore, since the theorem holds for $n = 1$ in the base case, and $(1 + x)^{n+1} \geq 1 + x(n + 1)$ is true, then the theorem holds for all values of $n \geq 1$.
+  
+  
+\\\\
+\newpage
+  \section*{Problem 4}
+  {\bf Solve the following problems:}
+  \begin{enumerate}[label=(\alph*)]
+    \item How many ways can a store manager arrange a group of 1 team leader and 3 team workers from his 25 employees?
+\\\\
+  %Enter your answer below this comment line.  
+  There are 25 different options for a team leader, so out of 25 people we need to choose one.\\
+  We can represent this by $C(25,1)$.\\
+  Next, there are 24 remaining people to choose 3 team workers from. 24 choose 3 can be represented by $C(24,3)$.\\
+  Now we multiply the number of possible team leaders by the number of possible team workers:\\
+  $C(25,1) * C(24,3) = \frac{25!}{1!24!} * \frac{24!}{3!21!} = 25 * \frac{24 * 23 * 22}{6} = 25 * 2024 = 50600$.\\
+  There are 50,600 different ways for the store manager to select a team leader and three team workers from his 25 employees.
+\\\\
+    \item A state’s license plate has 7 characters. Each character can be a capital letter $(A-Z)$, or a non-zero digit $(1-9)$. How many license plates start with 3 capital letters and end with 4 digits with no letter or digit repeated?
+\\\\
+  %Enter your answer below this comment line.  
+  There are 26 options for the first three 'spaces', so 26 choose 3, i.e. $C(26,3)$.\\
+  There are 10 options for the last four 'spaces', so 10 choose 4, i.e. $C(10,4)$.\\
+  Multiply them together and you get:\\
+  $C(26,3) * C(10,4) = \frac{26*25*24}{6} * \frac{10*9*8*7}{24} = 2600*210 = 546000$.\\
+  There are 546,000 different license plates that start with 3 capital letters and end with 4 digits with no letter or digit repeated.
+\\\\
+    \item How many binary strings of length 5 have at least 2 adjacent bits that are the same (``$00$'' or ``$11$'') somewhere in the string?
+\\\\
+  %Enter your answer below this comment line.  
+  For this problem, I simply thought about binary strings that don't have the same adjacent bits, and there are only two strings like that. 01010 and 10101 are the only 5-bit length strings that don't have adjacent bits that are the same. Since there are $2^5 = 32$ different 5-bit length strings, and only two don't meet the criteria, there are 30 binary strings of length 5 that have at least 2 adjacent bits that are the same somewhere in the string.
+\\\\
+  \end{enumerate}
+\newpage
+  \section*{Problem 5}
+  A class with n kids lines up for recess. The order in which the kids line up is random with each ordering being equally likely. There are three kids in the class named John, Betty, and Mary. The use of the word ``$or$'' in the description of the events, should be interpreted as the inclusive or. That is ``$A \;or\; B$'' means that $A$ is true, $B$ is true, or both $A$ and $B$ are true.\\
+  Give an expression for each of the probabilities below as a function of $n$. Simplify your final expression as much as possible so that your answer does not include any expressions of the form ($\dfrac{a}{b}$).
+
+  \begin{enumerate}[label=(\alph*)]
+    \item What is the probability that Betty is first in line or Mary is last in line?
+\\\\
+  %Enter your answer below this comment line.  
+  Starting with the assumption that the three students defined are not the total number of students...\\
+  There are $n!$ ways to line up the class.\\ 
+  If Betty is first, there are $1 * (n - 1)!$ ways to line up the class.\\
+  If Mary is last, there are $1 * (n-1)!$ ways to line up the class.\\
+  If we combine the two, since the question is inclusive or, we get $2((n-1)!)$ ways to line up the class with either Betty in front, Mary in back, or both.\\
+  Now we divide the number of desired outcomes by the number of total outcomes and get: $\frac{2((n-1)!)}{n!}$.\\
+  However, the question specifically asks for answers not in the form $(\frac{a}{b})$.\\
+  Therefore, we can express the same equation as $2((n-1)!)(n!)^{-1}$.\\
+  If, instead, we assume that the number of students named in the question is in fact the total number of students, $n = 3$, then we can plug it into our equation.\\
+  There is a $2((3-1)!)(3!)^{-1} = 2(2)(6)^{-1} = \frac{2}{3} = 0.\bar{3} \approx \%33$ probability that in a random line of three students, Betty would be first in line or Mary would be last in line or both.\\
+  
+\\\\
+    \item Explain the method used to calculate probability.
+\\\\
+  %Enter your answer below this comment line.  
+  Probability is the number of possible desired outcomes divided by the number of total possible outcomes.
+\\\\
+  \end{enumerate}
+  \newpage
+  \section*{Problem 6}
+The general manager, marketing director, and 3 other employees of Company $A$ are hosting a visit by the vice president and 2 other employees of Company $B$. The eight people line up in a random order to take a photo. Every way of lining up the people is equally likely.
+\begin{enumerate}[label=(\alph*)]
+  \item What is the probability that the general manager is next to the vice president?
+\\\\
+  %Enter your answer below this comment line.  
+  First we determine the total number of ways to line up:\\ 
+  $P(8) = 8! = 40320$ ways to line up.\\\\
+  Next we determine the number of ways for the general manager and the vice president to be next to each other within the line of 8 people:\\
+  $2$ ways to order them, so $2 * P(7!) = 10080$ ways for the general manager and the vice president to be next to each other within the line of 8 people.\\\\
+  Lastly, we divide the number of desired outcomes by the number of possible outcomes:\\
+  $\frac{10080}{40320} = .25$.\\\\
+  There is a \%25 chance the general manager and the vice president will be next to each other.
+\\\\
+  \item What is the probability that the marketing director is in the leftmost position?
+\\\\
+  %Enter your answer below this comment line.  
+  Since we already have the total number of ways to line up, we just need the number of ways to line up with the marketing director in the left-most position:\\
+  $P(7) = 7! = 5040$ ways for the marketing director to be in the left-most position in the line of 8 people.\\\\
+  Next we divide the number of desired outcomes by the number of total outcomes:\\
+  $\frac{5040}{40320} = .125$\\\\
+  There is a \%12.5 chance the marketing directory will be in the leftmost position.
+\\\\
+  \item Determine whether the two events are independent. Prove your answer by showing that one of the conditions for independence is either true or false.
+ \\\\
+  %Enter your answer below this comment line.  
+  Let the event $E$ be the general manager and the vice president standing next to each other in line.\\
+  Let the event $F$ be the marketing directory in the left most position in line.\\
+  We know the probability of both, and will express it as a function of $p$.\\
+  $p(E) = .25$ and $p(F) = .125$\\
+  In order for these events to be independent, we must verify a few things.\\\\
+  First, we will check to see if $p(E|F) = p(E)$:\\
+  $p(E|F) = \frac{p(E \bigcap F)}{p(F)}$.\\
+  To find $p(E \bigcap F)$, we first find the number of outcomes where both even $E$ are true and event $F$ are true:\\
+  $|E \bigcap F| = (1) * (2) * (6!) = 1440$, therefore, $p(E \bigcap F) = \frac{1440}{40320} = \frac{1}{28}$.\\
+  Since we know that $p(F) = .125 = \frac{1}{8}$, we can plug in the values into the equation:\\
+  $\frac{p(E \bigcap F)}{p(F)} = \frac{\frac{1}{28}}{\frac{1}{8}} = \frac{1}{28} * \frac{8}{1} = \frac{2}{7}$.\\
+  $p(E) = .25 = \frac{1}{4}$, since $\frac{2}{7} \not= p(E)$, the events are NOT independent.\\\\
+  We can think logically about this, and understand that when event $F$ is true, it removes some of the options that event $E$ has by taking up the first spot. Likewise, if event $E$ is true before applying event $F$, then event $F$ could only be true when event $E$ isn't using the first slot, making the events not independent of each other.
+\\\\
+\end{enumerate}
+\end{document}
+
